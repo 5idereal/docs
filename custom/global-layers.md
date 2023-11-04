@@ -1,45 +1,45 @@
-# Global Layers
+# 全域圖層
 
-> Available since v0.17
+> v0.17 後可用
 
-Global layers allow you to have custom components that **persistent** across slides. This could be useful for having footers, cross-slides animations, global effects, etc.
+全域圖層允許自訂元件在每張投影片都**持續**顯示。這對頁尾、跨投影片動畫、全域效果等功能非常有用。
 
-Slidev provides three layers for this usage, create `global-top.vue`, `global-bottom.vue` or `custom-nav-controls.vue` under your project root and it will pick up automatically.
+Slidev 提供了三個圖層供使用，只要在您的專案根目錄下建立 `global-top.vue`、`global-bottom.vue` 或 `custom-nav-controls.vue`，Slidev 就會自動載入。
 
-Layers relationship:
+圖層關係：
 
-- Global Top (`global-top.vue`)
-- Slides
-- Global Bottom (`global-bottom.vue`)
+- 全域頂層 (`global-top.vue`)
+- 投影片
+- 全域底層 (`global-bottom.vue`)
 - NavControls
-  - Customized Navigation Controls (`custom-nav-controls.vue`)
+  - 自訂瀏覽控制 (`custom-nav-controls.vue`)
 
-## Example
+## 範例
 
 ```html
 <!-- global-bottom.vue -->
 <template>
-  <footer class="absolute bottom-0 left-0 right-0 p-2">Your Name</footer>
+  <footer class="absolute bottom-0 left-0 right-0 p-2">您的名字</footer>
 </template>
 ```
 
-The text `Your Name` will appear to all your slides.
+文字 `您的名字` 會顯示在所有投影片上。
 
 ```html
 <!-- custom-nav-controls -->
 <template>
-  <button class="icon-btn" title="Next" @click="$slidev.nav.next">
+  <button class="icon-btn" title="下一頁" @click="$slidev.nav.next">
     <carbon:arrow-right />
   </button>
 </template>
 ```
 
-The button `Next` will appear in NavControls.
+按鈕 `下一頁` 會顯示在瀏覽控制上。
 
-To enable it conditionally, you can apply it with the [Vue Global Context](/custom/vue-context).
+若要根據條件啟用，您可以使用[Vue 全域 Context](/custom/vue-context)。
 
 ```html
-<!-- hide the footer from Page 4 -->
+<!-- 在第 4 頁隱藏頁尾-->
 <template>
   <footer
     v-if="$slidev.nav.currentPage !== 4"
@@ -57,13 +57,13 @@ To enable it conditionally, you can apply it with the [Vue Global Context](/cust
     v-if="$slidev.nav.currentLayout !== 'cover'"
     class="absolute bottom-0 left-0 right-0 p-2"
   >
-    Your Name
+    您的名字
   </footer>
 </template>
 ```
 
 ```html
-<!-- an example footer for pages -->
+<!-- 頁面的範例頁尾 -->
 <template>
   <footer
     v-if="$slidev.nav.currentLayout !== 'cover'"

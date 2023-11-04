@@ -15,7 +15,7 @@ You can test the generated build using a web server (Apache, NGINX, Caddy...etc.
 
 Then you can host it on [GitHub Pages](https://pages.github.com/), [Netlify](https://netlify.app/), [Vercel](https://vercel.com/), or whatever you want. Now you can share your slides with the rest of the world with a single link.
 
-### Base Path
+### 基本路徑
 
 To deploy your slides under sub-routes, you will need to pass the `--base` option. The `--base` path **must begin and end** with a slash `/`; for example:
 
@@ -25,7 +25,7 @@ $ slidev build --base /talks/my-cool-talk/
 
 Refer to [Vite's documentation](https://vitejs.dev/guide/build.html#public-base-path) for more details.
 
-### Provide Downloadable PDF
+### 提供可下載的 PDF 檔
 
 You can provide a downloadable PDF to the viewers of your SPA with the following config:
 
@@ -64,7 +64,7 @@ You can change the output directory using `--out`.
 $ slidev build --out my-build-folder
 ```
 
-### Watch mode
+### 監視模式
 
 By passing the `--watch` option the build will run in watch mode and will rebuild anytime the source changes.
 
@@ -72,7 +72,7 @@ By passing the `--watch` option the build will run in watch mode and will rebuil
 $ slidev build --watch
 ```
 
-### Multiple entries
+### 多個項目
 
 You can also build multiple slides at once.
 
@@ -88,7 +88,7 @@ $ slidev build *.md
 
 In this case, each input file will generate a folder containing the build in the output directory.
 
-## Examples
+## 範例
 
 Here are a few examples of the exported SPA:
 
@@ -127,7 +127,7 @@ Then go to your Netlify dashboard and create a new site with the repository.
 
 - [Vercel](https://vercel.com/)
 
-Create `vercel.json` in your project root with the following content.
+在您的專案根目錄建立 `vercel.json`，並，並貼上下列程式碼：
 
 ```json
 {

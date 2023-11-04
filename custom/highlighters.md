@@ -1,7 +1,7 @@
 # Highlighters
 
 Slidev comes with two syntax highlighter for you to choose from:
-
+語法突顯
 - [Prism](https://prismjs.com/)
 - [Shiki](https://github.com/shikijs/shiki)
 

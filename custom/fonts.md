@@ -1,10 +1,10 @@
-# Fonts
+# 字體
 
-> Available since v0.20
+> v0.20 後可用
 
-While you can use HTML and CSS to custom the fonts and style for your slides as you want, Slidev also provides a convenient way to use them effortlessly.
+除了使用 HTML 和 CSS 來自訂您的投影片字體和樣式外，Slidev 也提供了一種輕鬆的方式來輕鬆使用它們。
 
-In your frontmatter, configure as following
+在您的前言區塊中，設定：
 
 ```yaml
 ---
@@ -18,13 +18,13 @@ fonts:
 ---
 ```
 
-And that's all.
+就完成了。
 
-Fonts will be **imported automatically from [Google Fonts](https://fonts.google.com/)**. That means you can use any fonts available on Google Fonts directly.
+字體會**自動從 [Google Fonts](https://fonts.google.com/) 匯入**。這表示您可以直接使用 Google Fonts 上提供的任何字體。
 
-## Local Fonts
+## 本機字體
 
-By default, Slidev assumes all the fonts specified via `fonts` configurations come from Google Fonts. If you want to use local fonts, specify the `fonts.local` to opt-out the auto-importing. 
+預設情況下，Slidev 會假定所有透過 `fonts` 設定指定的字體都來自 Google Fonts。如果您想使用本機字體，請指定 `fonts.local` 來停用自動匯入。
 
 ```yaml
 ---
@@ -53,9 +53,9 @@ fonts:
 
 This configuration applies to all web fonts. For more fine-grained controls of each font's weights, you will need to manually import them with [HTML](/custom/directory-structure.html#index-html) and CSS.
 
-## Fallback Fonts
+## 後援字體
 
-For most of the scenarios, you only need to specify the "special font" and Slidev will append the fallback fonts for you, for example:
+大部分的情況下，您只需要指定「特殊字體」，Slidev 就會自動為您加上後援字體，例如：
 
 ```yaml
 ---
@@ -66,7 +66,7 @@ fonts:
 ---
 ```
 
-will result in 
+的結果會是
 
 ```css
 .font-sans {
@@ -80,7 +80,7 @@ will result in
 }
 ```
 
-If you want to disable the fallback fonts, configure as following
+如果您想要停用後援字體，請設定
 
 ```yaml
 ---
@@ -90,12 +90,12 @@ fonts:
 ---
 ```
 
-## Providers
+## 提供者
 
-- Options: `google` | `none`
-- Default: `google`
+- 選項：`google` | `none`
+- 預設：`google`
 
-Currently, only Google Fonts is supported, we are planned to add more providers in the future. Specify to `none` will disable the auto-importing feature entirely and treat all the fonts local.
+目前只支援 Google Fonts，我們計畫在未來加入更多的提供者。指定為 `none` 會完全停用自動匯入功能，並將所有字體視為本機字體。
 
 ```yaml
 ---
@@ -103,5 +103,3 @@ fonts:
   provider: 'none'
 ---
 ```
-
-

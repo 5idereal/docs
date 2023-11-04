@@ -1,13 +1,13 @@
-# Animations
+# 動畫
 
-## Click Animations
+## 點擊動畫
 
 ### `v-click`
 
 To apply "click animations" for elements, you can use the `v-click` directive or `<v-click>` components
 
 ```md
-# Hello
+# 哈囉
 
 <!-- Component usage: this will be invisible until you press "next" -->
 <v-click>
@@ -19,7 +19,7 @@ Hello World
 <!-- Directive usage: this will be invisible until you press "next" the second time -->
 <div v-click class="text-xl p-2">
 
-Hey!
+嘿！
 
 </div>
 ```
@@ -50,10 +50,10 @@ Same as `v-click` but instead of making the element appear, it makes the element
 ```md
 <v-clicks>
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
+- 項目 1
+- 項目 2
+- 項目 3
+- 項目 4
 
 </v-clicks>
 ```
@@ -65,12 +65,12 @@ It accepts a `depth` props for nested list:
 ```md
 <v-clicks depth="2">
 
-- Item 1
-  - Item 1.1
-  - Item 1.2
-- Item 2
-  - Item 2.1
-  - Item 2.2
+- 項目 1
+  - 項目 1.1
+  - 項目 1.2
+- 項目 2
+  - 項目 2.1
+  - 項目 2.2
 
 </v-clicks>
 ```
@@ -116,7 +116,7 @@ clicks: 3
 
 ### Enter & Leave
 
-> Available since v0.43.0
+> v0.43.0 後可用
 
 You can also specify the enter and leave index for the `v-click` directive by passing an array. The end index is exclusive.
 
@@ -153,9 +153,9 @@ By default, a subtle opacity transition is applied to those classes:
 }
 ```
 
-You can override them to customize the transition effects in your custom stylesheets. 
+You can override them to customize the transition effects in your custom stylesheets.
 
-For example, you can achieve the scaling up transitions by: 
+For example, you can achieve the scaling up transitions by:
 
 ```css
 // styles.css
@@ -223,11 +223,11 @@ The text `Slidev` will move from `-80px` to its original position on initializat
 
 Learn mode: [Demo](https://sli.dev/demo/starter/7) | [@vueuse/motion](https://motion.vueuse.org/) | [v-motion](https://motion.vueuse.org/features/directive-usage) | [Presets](https://motion.vueuse.org/features/presets)
 
-## Slide Transitions
+## 投影片轉場
 
 <div id="pages-transitions" />
 
-> Available since v0.39.0
+> v0.39.0 後可用
 
 Slidev supports slide transitions out of the box. You can enable it by setting the `transition` frontmatter option:
 
@@ -239,7 +239,7 @@ transition: slide-left
 
 This will give you a nice sliding effects on slide switching. Setting it in the frontmatter will apply to all slides. You can also set different transition per slide.
 
-### Builtin Transitions
+### 內建轉場
 
 - `fade` - Crossfade in/out
 - `fade-out` - Fade out and then fade in
@@ -251,7 +251,7 @@ This will give you a nice sliding effects on slide switching. Setting it in the 
 
 ### View Transitions
 
-> Available since v0.43.0
+> v0.43.0 後可用
 
 The **View Transitions API** provides a mechanism for easily creating animated transitions between different DOM states. Learn more how it works in [View Transitions API - MDN Web Docs - Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API).
 

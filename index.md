@@ -1,11 +1,11 @@
 ---
 home: true
 heroImage: /logo.png
-actionText: Get Started
+actionText: 入門指南
 actionLink: /guide/
 
-altActionText: Learn More
+altActionText: 了解詳情
 altActionLink: /guide/why
 
-footer: MIT Licensed | Copyright © 2021-PRESENT Anthony Fu
+footer: 採用 MIT 授權條款 | 版權所有 © 2021 - 現在 Anthony Fu
 ---

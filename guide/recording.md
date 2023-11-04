@@ -1,17 +1,17 @@
-# Recording
+# 錄製
 
-Slidev has a built-in recording and camera view. You can use them to record your presentation easily in one place.
+Slidv 內建了錄製和鏡頭檢視功能。您無須使用其他應用程式即可輕鬆地錄製您的簡報。
 
-## Camera View
+## 鏡頭檢視
 
-Click the <carbon-user-avatar class="inline-icon-btn"/> button in the navigation panel to show your camera view in the presentation. You can drag to move it, and use the handler on the right bottom corner to resize it. The size and position will persist in `localStorage` and will therefore be consistent across multiple refreshes, so no need to worry about that.
+點擊導覽列中的 <carbon-user-avatar class="inline-icon-btn"/> 按鈕，即可在投影片中顯示您的鏡頭。您可以拖曳來移動它，並使用右下角的控點來調整大小。大小和位置會儲存在 `localStorage` 中，因此在多次重新整理後仍會保持一致，不用擔心。
 
 <Tweet id="1395006771027120133" />
 
-## Recording
+## 錄製
 
-Clicking the <carbon-video class="inline-icon-btn"/> button in the navigation panel will bring up a dialog for you. Here you can choose to either record your camera embedded in your slides or to separate them into two video files.
+點擊導覽列中的 <carbon-video class="inline-icon-btn"/> 按鈕，將會顯示對話框。在這裡，您可以選擇錄製內嵌在投影片中的鏡頭，或將其分成兩個影片檔。
 
-This feature is powered by [RecordRTC](https://github.com/muaz-khan/RecordRTC) and uses the [WebRTC API](https://webrtc.org/).
+此功能由 [RecordRTC](https://github.com/muaz-khan/RecordRTC) 驅動，並使用了 [WebRTC API](https://webrtc.org/)。
 
 ![](/screenshots/recording.png)

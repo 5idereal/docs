@@ -1,14 +1,14 @@
-# Presenter Mode
+# 簡報者模式
 
-Click the <carbon-user-speaker class="inline-icon-btn"/> button in the navigation panel, or visit `http://localhost:3030/presenter` manually, to enter the presenter mode. Whenever you enter the presenter mode, other page instances will automatically stay in sync with the presenter.
+點擊導覽列中的 <carbon-user-speaker class="inline-icon-btn"/> 按鈕，或手動前往 `http://localhost:3030/presenter`，即可進入簡報者模式。每當您進入簡報者模式時，其他頁面實例都會自動與簡報者保持同步。
 
 ![](/screenshots/presenter-mode.png)
 
-## Disabling
+## 停用
 
-Presenter mode is enabled by default.
+預設情況下，簡報者模式是啟用的。
 
-You can disable this feature with the following config:
+您可以使用以下設定來停用此功能：
 
 ```md
 ---
@@ -16,20 +16,20 @@ presenter: false
 ---
 ```
 
-Or you can enable it only for `dev` or `build` mode by setting the mode you want in the config:
+或您可以在設定中設定 `dev` 或 `build` 模式來在指定模式下才啟用：
+
 ```md
 ---
 presenter: dev
 ---
 ```
-In that case the presenter will only be available when running `slidev` but not when running `slidev build`.
 
-## Remote restricted access
+在上面的範例中，簡報者模式只會在執行 `slidev` 時可用，但執行 `slidev build` 時則會停用。
 
-You can run your presentation with remote access by running `slidev --remote`.
+## 遠端限制存取
 
-In that case you may want to share the slides with other people but you don't want them to access the presenter mode to mess up your presentation.
+執行 `slidev --remote` 來遠端存取您的簡報。
 
-For this scenario you can provide a password for starting the server by running `slidev --remote=your_password`.
+在您想與其他人分享投影片，但不想讓他們存取簡報者模式以搞亂您的簡報時，這種情況下，您可以執行 `slidev --remote=your_password` 來為伺服器設定密碼。
 
-In that case you will need to provide the password when accessing `/presenter/*` routes.
+您在存取 `/presenter/*` 路徑時則需輸入密碼。

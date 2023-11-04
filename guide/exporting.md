@@ -1,6 +1,6 @@
-# Exporting
+# 匯出
 
-## Slides
+## 投影片
 
 ### PDF
 
@@ -21,7 +21,7 @@ $ slidev export
 
 After a few seconds, your slides will be ready at `./slides-export.pdf`.
 
-### PNGs and Markdown
+### PNG 和 Markdown
 
 When passing in the `--format png` option, Slidev will export PNG images for each slide instead of a PDF.
 
@@ -35,9 +35,9 @@ You can also compile a markdown file composed of compiled png using `--format md
 $ slidev export --format md
 ```
 
-### Dark mode
+### 深色模式
 
-In case you want to export your slides using the dark version of the theme, use the `--dark` option:
+如果您想以深色主題匯出投影片，請使用 `--dark` 選項：
 
 ```bash
 $ slidev export --dark
@@ -53,7 +53,7 @@ By default, Slidev exports one page per slide with clicks animations disabled. I
 $ slidev export --with-clicks
 ```
 
-### Slide range
+### 投影片範圍
 
 You can also specify a range of slides to export with the `--range` option.
 
@@ -61,7 +61,7 @@ You can also specify a range of slides to export with the `--range` option.
 $ slidev export --range 1,4-5,6
 ```
 
-### PDF outline
+### PDF 大綱
 
 > Available since v0.36.10
 
@@ -71,7 +71,7 @@ You can generate the PDF outline by passing the `--with-toc` option.
 $ slidev export --with-toc
 ```
 
-### Output filename
+### 輸出檔名
 
 You can specify the output filename with the `--output` option.
 
@@ -87,40 +87,40 @@ exportFilename: my-pdf-export
 ---
 ```
 
-### Export a range of slides
+### 匯出指定範圍的投影片
 
-By default, all slides in the presentation are exported. If you want to export a specific slide or a range of slides you can set the `--range` option and specify which slides you would like to export. 
+預設情況下會匯出簡報中的所有投影片。如果您想要匯出指定的投影片或範圍，您可以設定 `--range` 選項，並指定您想匯出哪些投影片。
 
 ```bash
 $ slidev export --range 1,6-8,10
 ```
 
-This option accepts both specific slide numbers and ranges.
+此選項接受特定的投影片編號和範圍。
 
-The example above would export slides 1,6,7,8, and 10.
+上面的範例會匯出第 1、6、7、8、10 張投影片。
 
+### 多個項目
 
-### Multiple entries
-
-You can also export multiple slides at once.
+您也可以一次匯出多張投影片。
 
 ```bash
 $ slidev export slides1.md slides1.md
 ```
 
-Or
+或
 
 ```bash
 $ slidev export *.md
 ```
 
-In this case, each input file will generate its own PDf file.
+在此情況下，每個輸入檔案都會產生自己的 PDF 檔。
 
-## Presenter notes
+## 簡報者筆記
 
-> Available since v0.36.8
+> v0.36.8 後可用
 
 Export only the presenter notes (the last comment block for each slide) into a text document in PDF.
+僅將
 
 ```bash
 $ slidev export-notes
@@ -128,23 +128,23 @@ $ slidev export-notes
 
 This command also accept multiple entries like for the [export command](#multiple-entries)
 
-## Single-Page Application (SPA)
+## 單頁式應用程式 (SPA)
 
-See [Static Hosting](/guide/hosting).
+參閱[靜態架設](/guide/hosting)。
 
-## Troubleshooting
+## 疑難排解
 
-### Timeout
+### 逾時
 
-For big presentation you might want to increase the playwrigth timeout with `--timeout`
+對於大型簡報，您可能需要使用 `--timeout` 來增加 playwright 的逾時時間
 
 ```bash
 $ slidev export --timeout 60000
 ```
 
-### Executable path
+### 可執行檔路徑
 
-You can set the browser executable path for playwright using `--executable-path`
+您可以使用 `--executable-path` 來為 playwright 指定瀏覽器的可執行檔路徑
 
 ```bash
 $ slidev export --executable-path [path_to_chromium]

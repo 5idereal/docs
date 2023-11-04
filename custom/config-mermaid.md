@@ -2,7 +2,7 @@
 
 <Environment type="client" />
 
-Create `./setup/mermaid.ts` with the following content:
+建立 `./setup/mermaid.ts`，並貼上下列程式碼：
 
 ```ts
 import { defineMermaidSetup } from '@slidev/types'
@@ -14,11 +14,11 @@ export default defineMermaidSetup(() => {
 })
 ```
 
-With the setup, you can provide a custom default setting for [Mermaid](https://mermaid-js.github.io/). Refer to the type definitions and its documentation for more details.
+設置完成後，您即可為 [Mermaid](https://mermaid-js.github.io/) 提供自訂的預設設定。請參考類型定義和其文件以獲得更多資訊。參閱類型定義和其說明文件以了解更多資訊。
 
-## Custom theme/styles
+## 自訂主題/樣式
 
-In case you want to create your custom Mermaid themes or styles, you can do this by defining `themeVariables` like in the following example:
+若您想要建立自訂的 Mermaid 主題或樣式，可以透過定義 `themeVariables` 來達成，如下所示：
 
 ```ts
 import { defineMermaidSetup } from '@slidev/types'
@@ -27,12 +27,11 @@ export default defineMermaidSetup(() => {
   return {
     theme: 'base',
     themeVariables: {
-      // General theme variables
+      // 一般主題變數
       noteBkgColor: "#181d29",
       noteTextColor: "#F3EFF5cc",
       noteBorderColor: "#404551",
-
-      // Sequence diagram variables
+      // 流程圖變數
       actorBkg: "#0E131F",
       actorBorder: "#44FFD2",
       actorTextColor: "#F3EFF5",
@@ -44,4 +43,4 @@ export default defineMermaidSetup(() => {
 })
 ```
 
-You can find all theme variables on the [Mermaid Theme Configuration](https://mermaid.js.org/config/theming.html) page.
+您可以在 [Mermaid 主題設定](https://mermaid-js.github.io/mermaid/#/theming)頁面找到所有的主題變數。

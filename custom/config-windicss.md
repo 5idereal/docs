@@ -1,11 +1,11 @@
-# Configure Windi CSS
+# 設定 Windi CSS
 
 <Environment type="node" />
 
 ::: warning
-Since Slidev v0.42.0, [UnoCSS](/custom/config-unocss) become the default CSS framework for Slidev.
+自 Slidev v0.42.0 起，[UnoCSS](/custom/config-unocss) 已成為 Slidev 的預設 CSS 框架。
 
-You can still use Windi CSS by setting `css: windicss` in the frontmatter.
+您仍然可以透過在前言區塊中設定 `css: windicss` 來使用 Windi CSS。
 ```md
 ---
 css: windicss
@@ -13,26 +13,26 @@ css: windicss
 ```
 :::
 
-Markdown naturally supports embedded HTML markups. You can therefore style your content the way you want.
+Markdown 原生支援內嵌 HTML 標記。因此您可以自由調整樣式。
 
-For example:
+例如：
 
 ```html
 <div class="grid pt-4 gap-4 grid-cols-[100px,1fr]">
 
-### Name
+### 名稱
 
-- Item 1
-- Item 2
+- 項目 1
+- 項目 2
 
 </div>
 ```
 
 The [Attributify Mode](https://windicss.org/posts/v30.html#attributify-mode) in [Windi CSS v3.0](https://windicss.org/posts/v30.html) is enabled by default.
 
-## Configurations
+## 設定
 
-To configure Windi CSS, create `setup/windicss.ts` with the following content to extend the builtin configurations
+若要設定 Windi CSS，請建立 `setup/windicss.ts`，並貼上下列程式碼以擴充內建設定：
 
 ```ts
 // setup/windicss.ts
@@ -42,12 +42,12 @@ import { defineWindiSetup } from '@slidev/types'
 // extending the builtin windicss configurations
 export default defineWindiSetup(() => ({
   shortcuts: {
-    // custom the default background
+    // 變更預設背景
     'bg-main': 'bg-white text-[#181818] dark:(bg-[#121212] text-[#ddd])',
   },
   theme: {
     extend: {
-      // fonts can be replaced here, remember to update the web font links in `index.html`
+      // 字體可以在此替換，記得更新 `index.html` 中的網頁字體連結
       fontFamily: {
         sans: 'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"',
         mono: '"Fira Code", monospace',
@@ -57,4 +57,4 @@ export default defineWindiSetup(() => ({
 }))
 ```
 
-Learn more about [Windi CSS configurations](https://windicss.org/guide/configuration.html)
+了解關於 [Windi CSS 設定](https://windicss.org/guide/configuration.html)的更多資訊

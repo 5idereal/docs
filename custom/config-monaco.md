@@ -2,21 +2,21 @@
 
 <Environment type="client" />
 
-Create `./setup/monaco.ts` with the following content:
+建立 `./setup/monaco.ts`，並貼上下列程式碼：
 
 ```ts
 import { defineMonacoSetup } from '@slidev/types'
 
 export default defineMonacoSetup(async (monaco) => {
-  // use `monaco` to configure
+  // 使用 `monaco` 來設定
 })
 ```
 
-Learn more about [configuring Monaco](https://github.com/Microsoft/monaco-editor).
+了解關於[設定 Monaco](https://github.com/Microsoft/monaco-editor) 的更多資訊。
 
-## Usage
+## 用法
 
-To use Monaco in your slides, simply append `{monaco}` to your code snippets:
+在程式碼片段後方加上 `{monaco}` 即可在投影片中使用 Monaco：
 
 ~~~js
 //```js
@@ -29,7 +29,7 @@ plusOne.value++ // error
 //```
 ~~~
 
-To
+會變成
 
 ~~~js
 //```js {monaco}
@@ -42,13 +42,13 @@ plusOne.value++ // error
 //```
 ~~~
 
-## Exporting
+## 匯出
 
-By default, Monaco will ONLY work on `dev` mode. If you would like to have it available in the exported SPA, configure it in your frontmatter:
+預設情況下，Monaco 只會在 `dev` 模式中運作。若您希望在匯出的 SPA 中使用，請在前言區塊中設定：
 
 ```yaml
 ---
-monaco: true # default "dev"
+monaco: true # 預設為 "dev"
 ---
 ```
 
@@ -65,11 +65,11 @@ const counter = ref(0)
 //```
 ~~~
 
-In the example above, make sure `vue` and `@vueuse/core` are installed locally as dependencies / devDependencies, Slidev will handle the rest to get the types working for the editor automatically!
+在上方的範例中，請確保 `vue` 和 `@vueuse/core` 已經作為 dependencies 或 devDependencies 安裝到本機，Slidev 會自動處理其餘的事情，讓編輯器中的類型自動運作！
 
-## Configure Themes
+## 設定主題
 
-The theme is controlled by Slidev based on the light/dark theme. If you want to customize it, you can pass the theme id to the setup function:
+主題由 Slidev 根據淺色/深色主題控制。如果您想自訂，可以將主題 id 傳給設定函數：
 
 ```ts
 // ./setup/monaco.ts
@@ -85,7 +85,7 @@ export default defineMonacoSetup(() => {
 })
 ```
 
-If you want to load custom themes:
+如果您想要載入自訂主題：
 
 ```ts
 import { defineMonacoSetup } from '@slidev/types'
@@ -109,9 +109,9 @@ export default defineMonacoSetup((monaco) => {
 
 > If you are creating a theme for Slidev, use dynamic `import()` inside the setup function to get better tree-shaking and code-splitting results.
 
-## Configure the Editor
+## 設定編輯器
 
-> Available since v0.43.0
+> v0.43.0 後可用
 
 If you would like to customize the Monaco editor you may pass an `editorOptions` object that matches the [Monaco IEditorOptions](https://microsoft.github.io/monaco-editor/docs.html#interfaces/editor.IEditorOptions.html) definition.
 

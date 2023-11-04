@@ -1,8 +1,8 @@
-# Markdown Syntax
+# Markdown 語法
 
-Slides are written within **a single markdown file** (by default `./slides.md`). 
+Slides are written within **a single markdown file** (by default `./slides.md`).
 
-You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides. 
+You can use [the Markdown features](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) as you normally would, with the additional support of inlined HTML and Vue Components. Styling using [UnoCSS](/custom/config-unocss) is also supported. Use `---` padded with a new line to separate your slides.
 
 ~~~md
 # Slidev
@@ -41,7 +41,7 @@ layout: cover
 
 # Slidev
 
-This is the cover page.
+這是封面頁。
 
 ---
 layout: center
@@ -49,20 +49,20 @@ background: './images/background-1.png'
 class: 'text-white'
 ---​
 
-# Page 2
+# 第 2 頁
 
 This is a page with the layout `center` and a background image.
 
 ---
 
-# Page 3
+# 第 3 頁
 
 This is a default page without any additional metadata.
 ~~~
 
 Refer to [customization](/custom/) for more details.
 
-## Code Blocks
+## 程式碼區塊
 
 One big reason I am building Slidev is needing to make my code look just right in the slides. So just as you expected, you can use Markdown flavored code block to highlight your code.
 
@@ -74,7 +74,7 @@ console.log('Hello, World!')
 
 We support [Prism](https://prismjs.com) and [Shiki](https://github.com/shikijs/shiki) as syntax highlighters. Refer to [the highlighters section](/custom/highlighters) for more details.
 
-### Line Highlighting
+### 指定行突顯
 
 To highlight specific lines, simply add line numbers within bracket `{}`. Line numbers start counting from 1 by default.
 
@@ -159,7 +159,7 @@ const c = add(1, 2)
 //```
 ~~~
 
-### Monaco Editor
+### Monaco 編輯器
 
 Whenever you want to do some modification in the presentation, simply add `{monaco}` after the language id — it turns the block into a fully-featured Monaco editor!
 
@@ -191,12 +191,12 @@ This line is removed on the left.
 //```
 ```
 
-## Embedded Styles
+## 內嵌樣式
 
-You can use `<style>` tag in your Markdown directly to override styles for the **current slide**.
+您可以在 Markdown 中直接使用 `<style>` 標籤來覆寫**目前投影片**的樣式。
 
 ```md
-# This is Red
+# 這是紅色的
 
 <style>
 h1 {
@@ -206,12 +206,16 @@ h1 {
 
 ---
 
-# Next slide is not affected
+# 下張投影片不受影響
 ```
 
 `<style>` tag in Markdown is always [scoped](https://vuejs.org/api/sfc-css-features.html#scoped-css). As an outstanding result, a selector with the child combinator (`.a > .b`) is unusable as such; see the previous link. To have global style overrides, check out the [customization section](/custom/directory-structure#style).
 
 Powered by [UnoCSS](/custom/config-unocss), you can directly use nested css and [directives](https://windicss.org/features/directives.html) (e.g. `@apply`)
+
+由 [UnoCSS](/custom/config-unocss) 驅動，您可以直接使用巢狀 CSS 和 [指令](https://windicss.org/features/directives.html) (例如 `@apply`)
+
+```md
 
 ```md
 # Slidev
@@ -243,13 +247,13 @@ For local assets, put them into the [`public` folder](/custom/directory-structur
 ![Local Image](/pic.png)
 ```
 
-For you want to apply custom sizes or styles, you can convert them to the `<img>` tag 
+For you want to apply custom sizes or styles, you can convert them to the `<img>` tag
 
 ```html
 <img src="/pic.png" class="m-40 h-40 rounded shadow" />
 ```
 
-## Notes
+## 筆記
 
 You can also take notes for each slide. They will show up in [Presenter Mode](/guide/presenter-mode) for you to reference during presentations.
 
@@ -260,26 +264,26 @@ In Markdown, the last comment block in each slide will be treated as a note.
 layout: cover
 ---
 
-# Page 1
+# 第 1 頁
 
-This is the cover page.
+這是封面頁。
 
-<!-- This is a note -->
+<!-- 這是筆記 -->
 
 ---
 
-# Page 2
+# 第 2 頁
 
 <!-- This is NOT a note because it precedes the content of the slide -->
 
-The second page
+第二頁
 
 <!--
-This is another note
+這是另一則筆記
 -->
 ~~~
 
-## Icons
+## 圖示
 
 Slidev allows you to have the accessing to almost all the popular open-source iconsets **directly** in your markdown. Powered by [`unplugin-icons`](https://github.com/antfu/unplugin-icons) and [Iconify](https://iconify.design/).
 
@@ -310,7 +314,7 @@ You can style the icons just like other HTML elements. For example:
 
 ## Slots
 
-> Available since v0.18
+> v0.18 後可用
 
 Some layouts can provide multiple contributing points using [Vue's named slots](https://v3.vuejs.org/guide/component-slots.html).
 
@@ -323,28 +327,28 @@ layout: two-cols
 
 <template v-slot:default>
 
-# Left
+# 左側
 
-This shows on the left
+這會在左側顯示
 
 </template>
 <template v-slot:right>
 
-# Right
+# 右側
 
-This shows on the right
+這會在右側顯示
 
 </template>
 ```
 
 <div class="grid grid-cols-2 rounded border border-gray-400 border-opacity-50 px-10 pb-4">
 <div>
-<h3>Left</h3>
-<p>This shows on the left</p>
+<h3>左側</h3>
+<p>這會在左側顯示</p>
 </div>
 <div>
-<h3>Right</h3>
-<p>This shows on the right</p>
+<h3>右側</h3>
+<p>這會在右側顯示</p>
 </div>
 </div>
 
@@ -355,15 +359,15 @@ We also provide a shorthand syntax sugar `::name::` for slot name. The following
 layout: two-cols
 ---
 
-# Left
+# 左側
 
-This shows on the left
+這會在左側顯示
 
 ::right::
 
-# Right
+# 右側
 
-This shows on the right
+這會在右側顯示
 ```
 
 You can also explicitly specify the default slot and provide in the custom order
@@ -375,20 +379,20 @@ layout: two-cols
 
 ::right::
 
-# Right
+# 右側
 
-This shows on the right
+這會在右側顯示
 
 ::default::
 
-# Left
+# 左側
 
-This shows on the left
+這會在左側顯示
 ```
 
-## Configurations
+## 設定
 
-All configurations needed can be defined in the Markdown file. For example:
+您所需的所有設定都可以在 Markdown 檔案中定義。例如：
 
 ```md
 ---
@@ -399,29 +403,28 @@ background: 'https://source.unsplash.com/1600x900/?nature,water'
 
 # Slidev
 
-This is the cover page.
+這是封面頁。
 ```
 
-Learn more about [frontmatter configurations](/custom/#frontmatter-configures).
+了解[前言設定](/custom/#frontmatter-configures)。
 
 ## LaTeX
 
-Slidev comes with LaTeX support out-of-box, powered by [KaTeX](https://katex.org/).
+Slidev 原生支援 LaTeX，由 [KaTeX](https://katex.org/) 驅動。
 
 <Tweet id="1392246507793915904" />
 
-### Inline
+### 行內
 
-Surround your LaTeX with a single `$` on each side for inline rendering.
+用 `$` 把您的 LaTeX 包起來以在行內渲染。
 
 ```md
 $\sqrt{3x-1}+(1+x)^2$
 ```
 
-### Block
+### 區塊
 
-Use two (`$$`) for block rendering. This mode uses bigger symbols and centers
-the result.
+使用 `$$` 來渲染區塊。此模式會使用較大的符號並將結果置中。
 
 ```md
 $$
@@ -438,7 +441,7 @@ $$
 $$
 ```
 
-Learn more: [Demo](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
+了解詳情：[展示](https://sli.dev/demo/starter/8) | [KaTeX](https://katex.org/) | [`markdown-it-katex`](https://github.com/waylonflinn/markdown-it-katex)
 
 ### LaTex line highlighting
 
@@ -457,21 +460,21 @@ $$ {1|3|all}
 $$
 ```
 
-## Diagrams
+## 圖表
 
-You can also create diagrams / graphs from textual descriptions in your Markdown, powered by [Mermaid](https://mermaid-js.github.io/mermaid).
+您也可以在您的 Markdown 中使用文字描述來建立圖表，由 [Mermaid](https://mermaid-js.github.io/mermaid) 驅動。
 
-Code blocks marked as `mermaid` will be converted to diagrams, for example:
+標記 `mermaid` 的程式碼區塊會被轉換成圖表，例如：
 
 ~~~md
 //```mermaid
 sequenceDiagram
-  Alice->John: Hello John, how are you?
-  Note over Alice,John: A typical interaction
+  Alice->John: 哈囉 John，你好嗎？
+  Note over Alice,John: 常見互動
 //```
 ~~~
 
-You can further pass an options object to it to specify the scaling and theming. The syntax of the object is a JavaScript object literal, you will need to add quotes (`'`) for strings and use comma (`,`) between keys.
+您還可以用選項 Object 來指定縮放和主題。語法與 JavaScript 的 Object 相同，字串需加上引號 (`'`)，並用逗號 (`,`) 來分隔鍵。
 
 ~~~md
 //```mermaid {theme: 'neutral', scale: 0.8}
@@ -482,40 +485,40 @@ C -->|Two| E[Result 2]
 //```
 ~~~
 
-Learn more: [Demo](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
+了解詳情：[展示](https://sli.dev/demo/starter/9) | [Mermaid](https://mermaid-js.github.io/mermaid)
 
-## Multiple Entries
+## 多項目
 
-> Available since v0.15
+> v0.15 後可用
 
-You can split your `slides.md` into multiple files and organize them as you want.
+您可以將 `slides.md` 分成多個檔案，並依您的風格整理。
 
 `slides.md` :
 
 ```md
-# Page 1
+# 第 1 頁
 
-This is a normal page
+這是普通頁面
 
 ---
 src: ./subpage2.md
 ---
 
-<!-- this page will be loaded from './subpage2.md' -->
-Inline content will be ignored
+<!-- 此頁面會從 './subpage2.md' 載入 -->
+行內內容會被忽略
 ```
 
 `subpage2.md` :
 
 ```md
-# Page 2
+# 第 2 頁
 
-This page is from another file
+這一頁來自其他檔案
 ```
 
-### Frontmatter Merging
+### 前言合併
 
-You can provide frontmatters from both your main entry and external markdown pages. If there are the same keys in them, the ones from the **main entry have the higher priority**. For example
+您可以為主進入點和外部的 markdown 檔案提供前言。如果它們有相同的鍵，則**主進入點的前言優先**。例如
 
 `slides.md` :
 
@@ -535,12 +538,12 @@ layout: cover
 background: https://sli.dev/foo.png
 ---
 
-# Cover
+# 封面
 
-Cover Page
+封面頁
 ```
 
-They will end up being equivalent of the following page:
+會等於以下頁面：
 
 ```md
 ---
@@ -549,14 +552,14 @@ background: https://sli.dev/bar.png
 class: text-center
 ---
 
-# Cover
+# 封面
 
-Cover Page
+封面頁
 ```
 
-### Page Reusing
+### 頁面重複使用
 
-With the multi-entries support, reusing pages could be straightforward. For example:
+有了多項目支援，重複使用頁面簡直易如反掌。例如：
 
 ```yaml
 ---
@@ -572,25 +575,25 @@ src: ./content.md
 ---
 
 ---
-# reuse
+# 重複使用
 src: ./content.md
 ---
 ```
 
-## MDC Syntax
+## MDC 語法
 
-> Available since v0.43.0
+> v0.43.0 後可用
 
-Slidev has and experimental support for [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) powered by [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc).
+Slidev 支援 [MDC (Markdown Components) Syntax](https://content.nuxtjs.org/guide/writing/mdc) (實驗性)，由 [`markdown-it-mdc`](https://github.com/antfu/markdown-it-mdc) 驅動。
 
-You can enable it by add `mdc: true` to the frontmatter of your markdown file.
+您可以在您的 Markdown 檔案的前言區塊中加上 `mdc: true` 來啟用。
 
 ```md
 ---
 mdc: true
 ---
 
-This is a [red text]{style="color:red"} :inline-component{prop="value"}
+這段字是[紅色的]{style="color:red"} :inline-component{prop="value"}
 
 ![](/image.png){width=500px lazy}
 
@@ -599,4 +602,4 @@ The **default** slot
 ::
 ```
 
-Learn more about [the syntax](https://content.nuxtjs.org/guide/writing/mdc).
+了解關於[語法](https://content.nuxtjs.org/guide/writing/mdc)的更多細節。

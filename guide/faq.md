@@ -1,21 +1,21 @@
 # FAQ
 
-## Grids
+## 網格
 
-Since Slidev is based on the Web, you can apply any grid layouts as you want. [CSS Grids](https://css-tricks.com/snippets/css/complete-guide-grid/), [flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/), or even [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/), you get the full controls.
+由於 Slidev 基於網頁，您可以隨心所欲地套用任何網格格式。[CSS 網格](https://css-tricks.com/snippets/css/complete-guide-grid/)、[flexboxes](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)，甚至是 [Masonry](https://css-tricks.com/native-css-masonry-layout-in-css-grid/)，盡在您的掌控之中。
 
-Since we have [UnoCSS](https://unocss.dev/) built-in, here is one simple way for you to reference:
+由於我們內建了 [UnoCSS](https://unocss.dev/)，這裡有一個簡單的範例供您參考：
 
 ```html
 <div class="grid grid-cols-2 gap-4">
 <div>
 
-The first column
+第一欄
 
 </div>
 <div>
 
-The second column
+第二欄
 
 </div>
 </div>
@@ -27,17 +27,17 @@ Go further, you can customize the size of each column like:
 <div class="grid grid-cols-[200px_1fr_10%] gap-4">
 <div>
 
-The first column (200px)
+第一欄 (200px)
 
 </div>
 <div>
 
-The second column (auto fit)
+第二欄 (auto fit)
 
 </div>
 <div>
 
-The third column (10% width to parent container)
+第三欄 (10% width to parent container)
 
 </div>
 </div>
@@ -49,15 +49,17 @@ Learn more about [Windi CSS Grids](https://windicss.org/utilities/layout/grid.ht
 
 Slides are defined in fixed sizes (default `980x552px`) and scale to fit with the user screen. You can safely use absolute position in your slides as they will scale along with the screen.
 
-For example:
+例如：
 
 ```html
 <div class="absolute left-30px bottom-30px">
-This is a left-bottom aligned footer
+這是一個對齊左下角的頁尾
 </div>
 ```
 
 To change the canvas' actual size, you can pass the `canvasWidth` options in your first frontmatter:
+
+若要
 
 ```yaml
 ---
@@ -65,16 +67,16 @@ canvasWidth: 800
 ---
 ```
 
-## Font Size
+## 字體大小
 
-If you feel the font size in your slides are too small, you can adjust it in a few ways:
+如果您覺得投影片的字體太小，有幾種方式可以調整：
 
-### Override Local Style
+### 覆寫區域樣式
 
 You can override styles for each slide with the inlined `<style>` tag.
 
 ```md
-# Page 1
+# 第 1 頁
 
 <style>
 h1 {
@@ -84,19 +86,19 @@ h1 {
 
 ---
 
-# Page 2
+# 第 2 頁
 
-This will not be affected.
+這不會受影響。
 ```
 
 Learn more: [Embedded Styles](/guide/syntax.html#embedded-styles)
 
-### Override Global Style
+### 覆寫全域樣式
 
 You can provide custom global styles by creating `./style.css`, for example
 
 ```css
-/* style.css */ 
+/* style.css */
 
 h1 {
   font-size: 10em !important;
@@ -105,7 +107,7 @@ h1 {
 
 Learn more: [Global Style](/custom/directory-structure.html#style)
 
-### Scale the Canvas
+### 縮放畫布
 
 Changing the canvas' actual size will scale all your contents(text, images, components, etc.) and slides
 

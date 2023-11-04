@@ -1,70 +1,70 @@
-# Why Slidev
+# 為什麼選 Slidev
 
-There are a lot of feature-rich, general-purpose, WYSIWYG slides makers like [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) and [Apple Keynote](https://www.apple.com/keynote/). They work pretty well for making nice slides with animations, charts, and many other things, while being very intuitive and easy to learn. So why bother making Slidev?
+已經有很多功能豐富、通用的所見即所得投影片製作工具，例如 [Microsoft PowerPoint](https://www.microsoft.com/en-us/microsoft-365/powerpoint) 和 [Apple Keynote](https://www.apple.com/keynote/)。它們可以很好地製作漂亮的投影片，並具有動畫、圖表和許多其他功能，同時非常直觀和易於學習。那麼為什麼還要開發 Slidev 呢？
 
-Slidev aims to provide the flexibility and interactivity for developers to make their presentations even more interesting, expressive, and attractive by using the tools and technologies they are already familiar with. 
+Slidev 致力於提供開發者更大的靈活性和互動性，讓他們能夠使用他們已經熟悉的工具和技術來製作更有趣、更具表現力和吸引力的簡報。
 
-When working with WYSIWYG editors, it is easy to get distracted by the styling options. Slidev remedies that by separating the content and visuals. This allows you to focus on one thing at a time, while also being able to reuse the themes from the community. Slidev does not seek to replace other slide deck builders entirely. Rather, it focuses on catering to the developer community.
+使用所見即所得編輯器時，很容易因為樣式選項而分心。Slidev 通過分離內容和視覺效果來解決這個問題。這樣您就可以一次專注於一件事情，同時還可以重複使用社群提供的主題。Slidev 不是要完全取代其他投影片製作工具。相反，它專注於迎合開發者社群的需求。
 
 ## Slidev
 
 ![](/screenshots/cover.png)
 
-Here are a few of the coolest features of Slidev:
+以下列出幾個 Slidev 最酷炫的功能：
 
-## Markdown-based
+## 基於 Markdown
 
 Slidev uses an extended Markdown format to store and organize your slides in a single plain text file. This lets you focus on making the content. And since the content and styles are separated, this also made it possible to switch between different themes effortlessly.
 
 Learn more about [Slidev's Markdown Syntax](/guide/syntax).
 
-## Themable
+## 主題
 
-Themes for Slidev can be shared and installed using npm packages. You then apply them with only one line of config.
+Slidev 的主題可以透過 npm 套件分享和安裝。只需一行設定即可套用。
 
-Check out the [theme gallery](/themes/gallery) or [learn how to write a theme](/themes/write-a-theme).
+逛逛[主題庫](/themes/gallery)或了解如何[開發主題](/themes/write-a-theme)。
 
-## Developer Friendly
+## 開發者友善
 
 Slidev provides first-class support for code snippets for developers. It supports both [Prism](https://prismjs.com/) and [Shiki](https://github.com/shikijs/shiki) to get pixel perfect syntax highlighting, while still being able to modify the code at any time. With [Monaco editor](https://microsoft.github.io/monaco-editor/) built-in, it also empowers you to do live coding / demonstration in your presentation with autocompletion, type hovering, and even TypeScript type check support.
 
 Learn more about [highlighters](/custom/highlighters) and [Monaco configuration](/custom/config-monaco).
 
-## Fast
+## 飛快
 
-Slidev is powered by [Vite](https://vitejs.dev/), [Vue 3](https://v3.vuejs.org/) and [UnoCSS](https://unocss.dev/), which give you the most wonderful authoring experience. Every change you made will reflect to your slides **instantly**.
+Slidev 由 [Vite](https://vitejs.dev/)、[Vue 3](https://v3.vuejs.org/) 和 [UnoCSS](https://unocss.dev/) 驅動，為您提供最美好的編寫體驗。您所做的每一個更改都會**立即**反映到您的投影片中。
 
 Find more about [our tech stack](/guide/#tech-stack).
 
 ## Interactive & Expressive
 
-You can write custom Vue components and use them directly inside your markdown file. You can also interact with them inside the presentation to express your idea in a more interesting and intuitive way.
+您可以撰寫自訂的 Vue 元件，並在您的 Markdown 檔案中直接使用。您也可以在簡報中與它們互動，以更有趣和直觀的方式表達您的想法。
 
-## Recording Support
+## 錄製支援
 
-Slidev provides built-in recording and camera view. You can share your presentation with your camera view inside, or record and save them separately for your screen and camera. All with one go, no additional tools are needed.
+Slidev 內建錄製和鏡頭檢視功能。您可以在簡報中分享您的鏡頭畫面，或是錄製並分別儲存您的螢幕和鏡頭畫面。一次完成，無需額外工具。
 
 Learn more about [recording here](/guide/recording).
 
 ## Portable
 
-Export your slides into PDF, PNGs, or even a hostable Single-page Application (SPA) with a single command, and share them anywhere.
+只需一行命令即可將您的投影片匯出成 PDF、PNG，甚至是可託管的單頁應用程式 (SPA)，並在任何地方分享。
 
 Read more about that in the [exporting docs](/guide/exporting).
 
 ## Hackable
 
-Being powered by web technologies, anything that can be done in a web app is also possible with Slidev. For example, WebGL, API requests, iframes, or even live sharing. It's up to your imagination!
+Slidev 由網頁技術驅動，任何能在網頁應用程式中完成的事情都可以在 Slidev 中完成。例如 WebGL、API 請求、iframe，甚至是即時共享。想像力就是你的超能力！
 
-## Give it a Try
+## 親自試試
 
-Playing around with Slidev will tell you more than a thousand words. You are just one command away:
+說這麼多，不如您親自上手試試。只需一行命令：
 
 ```bash
 $ npm init slidev
 ```
 
-Or have a quick preview of it:
+或者來個預覽：
 
 <div class="aspect-9/16 relative">
 <iframe class="rounded w-full shadow-md border-none" src="https://www.youtube.com/embed/eW7v-2ZKZOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

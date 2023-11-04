@@ -1,32 +1,34 @@
 # Getting Started
 
-## Overview
+## 概覽
 
 Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> is a web-based slides maker and presenter. It's designed for developers to focus on writing content in Markdown while also having the power of HTML and Vue components to deliver pixel-perfect layouts and designs with embedded interactive demos in your presentations.
+
+Slidev <sup>(slide + dev, **/slaɪdɪv/**)</sup> 是一個基於網頁的投影片製作與簡報工具。它專為開發者設計，讓你可以專注於使用 Markdown 撰寫內容，同時也能夠使用 HTML 與 Vue 元件來提供完美的佈局與設計，並在簡報中嵌入互動式示範。
 
 It uses a feature-rich markdown file to generate beautiful slides with an instant reloading experience, along with many built-in integrations such as live coding, PDF exporting, presentation recording, and so on. Since it's powered by the web, you can do anything with Slidev - the possibilities are endless.
 
 You can learn more about the rationale behind the project in the [Why Slidev](/guide/why) section.
 
-### Features
+### 功能
 
-- 📝 [**Markdown-based**](/guide/syntax.html) - use your favorite editors and workflow
-- 🧑‍💻 [**Developer Friendly**](/guide/syntax.html#code-blocks) - built-in syntax highlighting, live coding, etc.
+- 📝 [**基於 Markdown**](/guide/syntax.html) - use your favorite editors and workflow
+- 🧑‍💻 [**開發者友善**](/guide/syntax.html#code-blocks) - built-in syntax highlighting, live coding, etc.
 - 🎨 [**Themable**](/themes/gallery.html) - theme can be shared and used with npm packages
 - 🌈 [**Stylish**](/guide/syntax.html#embedded-styles) - on-demand utilities via [UnoCSS](https://github.com/unocss/unocss) or [Windi CSS](https://windicss.org/).
-- 🤹 [**Interactive**](/custom/directory-structure.html#components) - embedding Vue components seamlessly
-- 🎙 [**Presenter Mode**](/guide/presenter-mode.html) - use another window, or even your phone to control your slides
-- 🎨 [**Drawing**](/guide/drawing.html) - draw and annotate on your slides
+- 🤹 [**可互動**](/custom/directory-structure.html#components) - embedding Vue components seamlessly
+- 🎙 [**簡報者模式**](/guide/presenter-mode.html) - use another window, or even your phone to control your slides
+- 🎨 [**繪製**](/guide/drawing.html) - draw and annotate on your slides
 - 🧮 [**LaTeX**](/guide/syntax.html#latex) - built-in LaTeX math equations support
-- 📰 [**Diagrams**](/guide/syntax.html#diagrams) - creates diagrams with textual descriptions 
-- 🌟 [**Icons**](/guide/syntax.html#icons) - Access to icons from any iconset directly
-- 💻 [**Editors**](/guide/editors.html) - integrated editor, or [extension for VS Code](https://github.com/slidevjs/slidev-vscode)
+- 📰 [**流程圖**](/guide/syntax.html#diagrams) - creates diagrams with textual descriptions
+- 🌟 [**圖示**](/guide/syntax.html#icons) - Access to icons from any iconset directly
+- 💻 [**編輯器**](/guide/editors.html) - integrated editor, or [extension for VS Code](https://github.com/slidevjs/slidev-vscode)
 - 🎥 [**Recording**](/guide/recording.html) - built-in recording and camera view
-- 📤 [**Portable**](/guide/exporting.html) - export into PDF, PNGs, or even a hostable SPA
+- 📤 [**可攜式**](/guide/exporting.html) - export into PDF, PNGs, or even a hostable SPA
 - ⚡️ [**Fast**](https://vitejs.dev) - instant reloading powered by [Vite](https://vitejs.dev)
 - 🛠 [**Hackable**](/custom/config-vite.html) - using Vite plugins, Vue components, or any npm packages
 
-### Tech Stack
+### 技術堆疊
 
 Slidev is made possible by combining these tools and technologies.
 

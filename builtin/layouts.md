@@ -1,81 +1,80 @@
-# Layouts
+# 版面配置
 
-## Built-in Layouts
+## 內建的版面配置
 
-> As themes may override layouts behaviour, the best way to know exactly the usage, parameters and examples is referring their documentation.
-
+> 主題可能會覆蓋版面配置的行為，參閱他們的說明文件是了解使用方式、參數和範例的好方法。
 
 ### `center`
 
-Displays the content in the middle of the screen.
+在畫面正中央顯示內容。
 
 ### `cover`
 
-Used to display the cover page for the presentation, may contain the presentation title, contextualization, etc.
+用於顯示投影片的封面，可以包含投影片標題、說明等。
 
 ### `default`
 
-The most basic layout, to display any kind of content.
+最基本的版面，用於顯示任何類型的內容。
 
 ### `end`
 
-The final page for the presentation.
+簡報的最後一頁。
 
 ### `fact`
 
-To show some fact or data with a lot of prominence on the screen.
+在畫面上顯示顯著事實或資料。
 
 ### `full`
 
-Use all the space of the screen to display the content.
+使用所有畫面空間來顯示內容。
 
 ### `image-left`
 
-Shows an image on the left side of the screen, the content will be placed on the right side.
+在畫面左側顯示圖片，右側顯示內容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
 layout: image-left
 
-# the image source
+# 圖片來源
 image: ./path/to/the/image
 
-# a custom class name to the content
+# 內容的自訂 class 名稱
 class: my-cool-content-on-the-right
 ---
 ```
 
 ### `image-right`
 
-Shows an image on the right side of the screen, the content will be placed on the left side.
+在畫面右側顯示圖片，左側顯示內容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
 layout: image-right
 
-# the image source
+# 圖片來源
 image: ./path/to/the/image
 
-# a custom class name to the content
+# 內容的自訂 class 名稱
 class: my-cool-content-on-the-left
 ---
 ```
 
 ### `image`
 
-Shows an image as the main content of the page.
+顯示圖片作為頁面的主要內容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
 layout: image
 
-# the image source
+# 圖片來源
 image: ./path/to/the/image
 ---
 ```
@@ -83,51 +82,51 @@ image: ./path/to/the/image
 
 ### `iframe-left`
 
-Shows a web page on the left side of the screen, the content will be placed on the right side.
+在畫面左側顯示網頁，右側顯示內容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
 layout: iframe-left
 
-# the web page source
+# 網頁來源
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# 內容的自訂 class 名稱
 class: my-cool-content-on-the-right
 ---
 ```
 
 ### `iframe-right`
 
-Shows a web page on the right side of the screen, the content will be placed on the left side.
+在畫面右側顯示網頁，左側顯示內容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
 layout: iframe-right
 
-# the web page source
+# 網頁來源
 url: https://github.com/slidevjs/slidev
 
-# a custom class name to the content
+# 內容的自訂 class 名稱
 class: my-cool-content-on-the-left
 ---
 ```
 
 ### `iframe`
 
-Shows a web page as the main content of the page.
+顯示網頁作為頁面的主要內容。
 
-#### Usage
+#### 用法
 
 ```yaml
 ---
 layout: iframe
 
-# the web page source
+# 網頁來源
 url: https://github.com/slidevjs/slidev
 ---
 ```
@@ -135,80 +134,78 @@ url: https://github.com/slidevjs/slidev
 
 ### `intro`
 
-To introduce the presentation, usually with the presentation title, a short description, the author, etc.
+介紹簡報，通常包含簡報標題、簡短說明、作者等。
 
 ### `none`
 
-A layout without any existent styling.
+無任何樣式的版面配置。
 
 ### `quote`
 
-To display a quotation with prominience.
+凸顯引文。
 
 ### `section`
 
-Used to mark the beginning of a new presentation section.
+用於標記簡報新章節的開頭。
 
 ### `statement`
 
-Make an affirmation/statement as the main page content.
+將肯定/陳述句作為頁面的主要內容。
 
 ### `two-cols`
 
-Separates the page content in two columns.
+將頁面內容分為兩欄。
 
-#### Usage
-
+#### 用法
 
 ```md
 ---
 layout: two-cols
 ---
 
-# Left
+# 左邊
 
-This shows on the left
+這會顯示在左邊
 
 ::right::
 
-# Right
+# 右邊
 
-This shows on the right
+這會顯示在右邊
 ```
 
 ### `two-cols-header`
 
-Separates the upper and lower lines of the page content, and the second line separates the left and right columns.
+分隔頁面內容的上下兩行，第二行分隔左右兩欄。
 
-#### Usage
-
+#### 用法
 
 ```md
 ---
 layout: two-cols-header
 ---
 
-This spans both
+這會橫跨兩欄
 
 ::left::
 
-# Left
+# 左邊
 
-This shows on the left
+這會顯示在左邊
 
 ::right::
 
-# Right
+# 右邊
 
-This shows on the right
+這會顯示在右邊
 ```
 
-## Custom Layouts
+## 自訂版面配置
 
-Create a directory `layouts/` under your project root, and simply put your custom Vue layout components under it.
+在專案根目錄下建立 `layouts/` 資料夾，然後將您自訂的 Vue 版面配置元件放進去。
 
-Read more in the [Customization](/custom/directory-structure#layouts) section.
+在[自訂](/custom/directory-structure#layouts)章節中查看更多資訊。
 
-## Theme-provided Layouts
+## 由主題提供的版面配置
 
-Themes can provide layouts or override existing ones. Please read their documentation for what they have provided.
+主題能夠提供版面配置或覆蓋現有的版面配置。請參閱其說明文件以瞭解它們所提供的版面配置。

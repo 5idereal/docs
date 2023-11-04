@@ -1,27 +1,27 @@
-# Configure and Extend the Parser
+# 設定並擴充分析器
 
-Slidev parses your presentation file (e.g. `slides.md`) in three steps:
+Slidv 會分三步來分析您的簡報檔案（例如 `slides.md`）：
 
 1. A "preparsing" step is carried out: the file is split into slides using the `---` separator, and considering the possible frontmatter blocks.
-2. Each slide is parsed with an external library.
+2. 每張投影片會使用外部程式庫來分析。
 3. Slidev resolves the special frontmatter property `src: ....`, which allows to include other md files.
 
-## Markdown Parser
+## Markdown 分析器
 
 Configuring the markdown parser used in step 2 can be done by [configuring Vite internal plugins](/custom/config-vite#configure-internal-plugins).
 
-## Preparser Extensions
+## 預分析器擴充功能
 
-> Available since v0.37.0
+> v0.37.0 後可用
 
 :::warning
 Important: when modifying the preparser configuration, you need to stop and start slidev again (restart might not be sufficient).
+重要：
 :::
 
-The preparser (step 1 above) is highly extensible and allows to implement custom syntaxes for your md files. Extending the preparser is considered **an advanced feature** and is susceptible to break [editor integrations](/guide/editors) due to implicit changes in the syntax.
+預分析器 (上方的第 1 步) 的擴充性極高，您可以為您的 Markdown 檔案實作自訂語法。擴充預分析器被視為**進階功能**，且可能因為語法的隱含變更而導致[編輯器整合](/guide/editors)出現問題。
 
-To customize it, create a `./setup/preparser.ts` file with the following content:
-
+若要自訂，請建立 `./setup/preparser.ts` 檔案，並貼上下列程式碼：
 
 ```ts
 import { definePreparserSetup } from '@slidev/types'
@@ -41,6 +41,9 @@ export default definePreparserSetup(({filepath, headmatter}) => {
 ```
 
 This example systematically replaces any `@@@` line by a line with `hello`. It illustrates the structure of a preparser configuration file and some of the main concepts the preparser involves:
+
+此範例會將任何 `@@@` 行替換為 `hello`。它說明了預分析器設定檔的結構以及預分析器涉及的一些主要概念：
+
 - `definePreparserSetup` must be called with a function as parameter.
 - The function receives the file path (of the root presentation file) and headmatter (from the md file). It could use this information (e.g., enable extensions based on the presentation file).
 - The function must return a list of preparser extensions.
@@ -51,21 +54,21 @@ This example systematically replaces any `@@@` line by a line with `hello`. It i
 
 ## Example Preparser Extensions
 
-### Use case 1: compact syntax top-level presentation
+### 用例 1: compact syntax top-level presentation
 
 Imagine a situation where (part of) your presentation is mainly showing cover images and including other md files. You might want a compact notation where for instance (part of) `slides.md` is as follows:
 
 ```md
 
 @cover: /nice.jpg
-# Welcome
+# 歡迎
 @src: page1.md
 @src: page2.md
 @cover: /break.jpg
 @src: pages3-4.md
 @cover: https://source.unsplash.com/collection/94734566/1920x1080
-# Questions?
-see you next time
+# 有問題嗎？
+下次見
 
 ```
 
@@ -110,7 +113,7 @@ export default definePreparserSetup(() => {
 And that's it.
 
 
-### Use case 2: using custom frontmatter to wrap slides
+### 用例 2: using custom frontmatter to wrap slides
 
 Imagine a case where you often want to scale some of your slides but still want to use a variety of existing layouts so create a new layout would not be suited.
 For instance, you might want to write your `slides.md` as follows:
@@ -124,14 +127,14 @@ layout: quote
 _scale: 0.75
 ---
 
-# Welcome
+# 歡迎
 
-> great!
+> 很棒！
 
 ---
 _scale: 4
 ---
-# Break
+# 休息
 
 ---
 
@@ -141,8 +144,8 @@ _scale: 4
 layout: center
 _scale: 2.5
 ---
-# Questions?
-see you next time
+# 有問題嗎？
+下次見
 
 ```
 
@@ -174,4 +177,4 @@ export default definePreparserSetup(() => {
 })
 ```
 
-And that's it.
+就醬。
